@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="ci-cd-pipelineFlow" doc:id="5edf1b42-0dbe-47f9-b8f6-7ac5eeef478e" >
 		<http:listener doc:name="Listener" doc:id="2c7a12b4-6411-4410-a537-90538bfed39a" config-ref="HTTP_Listener_config" path="/"/>
+		<logger level="INFO" doc:name="Logger" doc:id="cf458d49-fed8-426d-90cd-b130b50fc884" message="Start"/>
 		<ee:transform doc:name="Transform Message" doc:id="993f95c4-b925-4fba-ae07-bc7ab0e369c7" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
